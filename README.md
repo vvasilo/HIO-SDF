@@ -2,11 +2,15 @@
 
 *Vasileios Vasilopoulos*, *Suveer Garg*, *Jinwook Huh*, *Bhoram Lee*, *Volkan Isler*
 
-[**Paper**](https://arxiv.org/abs/2310.09463) | [**Project page**](https://vvasilo.github.io/HIO-SDF-project-page/)
-
-This package includes the ROS implementation of "HIO-SDF: Hierarchical Incremental Online Signed Distance Fields", developed by Samsung Research (Samsung AI Center - New York).
+This package includes the ROS implementation of [HIO-SDF: Hierarchical Incremental Online Signed Distance Fields](https://arxiv.org/abs/2310.09463), developed by Samsung Research (Samsung AI Center - New York).
 
 ![Pipeline](misc/method.gif)
+
+Our method uses a mixture of approaches to extract data for the self-supervised training of the global SDF: a) a discrete model for coarse global SDF value look-up without replaying past data, and b) a sensor-based local SDF representation that captures more fine details around the collision boundaries.
+
+The deep neural network representing the global SDF is constructed using periodic activation functions (SIREN), in order to enforce better accuracy and satisfaction of SDF-related constraints. Compared to alternative methods, the use of SIREN allows us to achieve superior performance with a very simple definition of the loss function.
+
+Unlike prior work, our method offers more flexibility, as it works both with depth sensors and sparse point cloud inputs (e.g., from a 3D LiDAR sensor).
 
 ---
 
@@ -32,7 +36,7 @@ This package assumes the existence of a working ROS Noetic installation on Ubunt
 
     ```
     cd <path to catkin_ws>/src
-    git clone https://github.com/SamsungLabs/HIO-SDF.git
+    git clone https://github.com/vvasilo/HIO-SDF.git
     ```
 
 4. Compile all packages with:
@@ -189,6 +193,14 @@ Make sure to set the `do_eval` parameter to `False` in the [HIO-SDF configuratio
 	```
 
 ![Example](misc/example.gif)
+
+## Results
+
+![](misc/results1.mp4)
+
+![](misc/results2.mp4)
+
+![](misc/results3.mp4)
 
 ## License
 
