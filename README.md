@@ -2,7 +2,7 @@
 
 *Vasileios Vasilopoulos*, *Suveer Garg*, *Jinwook Huh*, *Bhoram Lee*, *Volkan Isler*
 
-This package includes the ROS implementation of [HIO-SDF: Hierarchical Incremental Online Signed Distance Fields](https://arxiv.org/abs/2310.09463), developed by Samsung Research (Samsung AI Center - New York).
+This package includes the ROS implementation of [HIO-SDF: Hierarchical Incremental Online Signed Distance Fields](https://arxiv.org/abs/2310.09463).
 
 ![Pipeline](misc/method.gif)
 
@@ -196,11 +196,11 @@ Make sure to set the `do_eval` parameter to `False` in the [HIO-SDF configuratio
 
 ## Results
 
-![](misc/results1.mp4)
+![](misc/results1.gif)
 
-![](misc/results2.mp4)
+![](misc/results2.gif)
 
-![](misc/results3.mp4)
+![](misc/results3.gif)
 
 ## License
 
